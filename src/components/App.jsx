@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { Phonebook } from 'components/Phonebook/Phonebook';
 import { Filter } from 'components/Filter/Filter';
 import { ContactsList } from 'components/Contacts/Contacts';
-import { Layout, TitleH1, TitleH2 } from 'Layout';
+import { Layout, TitleH1, TitleH2 } from 'components/Layout';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectError, selectLoading } from 'redux/selectors';
 import { fetchContacts } from 'redux/api';
-import { BeatLoaderStyled, Error } from 'Message';
+import { BeatLoaderStyled, Error } from 'components/Message';
 
 export const App = () => {
   const contacts = useSelector(selectContacts);
