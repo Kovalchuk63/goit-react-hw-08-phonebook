@@ -22,9 +22,7 @@ const Contacts = () => {
       <LayoutSection>
         <Phonebook />
         {isLoadingAdd && <BeatLoaderStyled color="#36d7b7"></BeatLoaderStyled>}
-        {errorAdd && (
-          <Error>Error... Please reload the page and try again!</Error>
-        )}
+        {errorAdd && <Error>Errror... Please, try again!</Error>}
       </LayoutSection>
       {contacts.length > 0 && (
         <LayoutSection>
@@ -33,9 +31,7 @@ const Contacts = () => {
           {isLoadingDelete && (
             <BeatLoaderStyled color="#36d7b7"></BeatLoaderStyled>
           )}
-          {errorDelete && (
-            <Error>Error... Please reload the page and try again!</Error>
-          )}
+          {errorDelete && <Error>Error... Please, try again!</Error>}
         </LayoutSection>
       )}
     </React.Fragment>

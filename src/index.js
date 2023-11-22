@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const theme = {
   bgColors: {
-    bgColorSection: '#a9a9a9',
+    bgColorSection: '#30D4B9',
     bgColorButton: '#4d5ae5',
     activeBgColor: '#404bbf',
   },
@@ -23,7 +23,7 @@ const theme = {
     activeColorLink: '#000000',
   },
   boxShadowColor: '#454545',
-  radius: '5px',
+  radius: '10px',
   spacing: value => `${value * 4}px`,
 };
 
