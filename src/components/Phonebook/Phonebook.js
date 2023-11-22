@@ -1,11 +1,11 @@
 import React from 'react';
+import Notiflix from 'notiflix';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Button, ErrMsg, StyledField, StyledForm } from './Phonebook.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import Notiflix from 'notiflix';
-import { addContact } from 'redux/api';
 import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,7 +27,7 @@ export const Phonebook = () => {
     <Formik
       initialValues={{
         name: '',
-        phone: '',
+        number: '',
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, helpers) => {
@@ -47,8 +47,8 @@ export const Phonebook = () => {
         <label type="tel" htmlFor="phone">
           Phone
         </label>
-        <StyledField id="phone" name="phone" />
-        <ErrMsg component="div" name="phone" />
+        <StyledField id="number" name="number" />
+        <ErrMsg component="div" name="number" />
 
         <Button type="submit">Add contact</Button>
       </StyledForm>

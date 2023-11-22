@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { GlobalStyle } from 'GlobalStyle';
+import { GlobalStyle } from 'components/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-import { App } from 'App';
+import { App } from 'components/App';
 import { store } from 'redux/store';
 import { Provider } from 'react-redux';
 
@@ -13,10 +13,16 @@ const theme = {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <App />
-      <GlobalStyle />
-    </ThemeProvider>
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter basename="/goit-react-hw-08-phonebook">
+            <App />
+            <GlobalStyle />
+          </BrowserRouter>
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
