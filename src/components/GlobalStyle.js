@@ -4,7 +4,6 @@ import 'modern-normalize';
 export const GlobalStyle = createGlobalStyle`
 
 body{
-  background-color: #d3d3d3;
   padding: 50px;
 }
 

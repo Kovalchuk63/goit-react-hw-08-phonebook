@@ -7,10 +7,16 @@ import { StyledForm, StyledField, Button, ErrMsg } from './RegisterForm.styled';
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Name is required')
-    .min(2, 'Name must be 2 characters long')
+    .min(3, 'Name must be at least 3 characters long')
     .matches('[a-zA-Zа-яА-ЯіІїЇ]+', 'Enter valid symbols'),
   email: Yup.string().email('Invalid email').required('Email is required'),
-  password: Yup.string().required('Passsword is required'),
+  password: Yup.string()
+    .required('Password is required')
+    .min(5, 'Password must be at least 5 characters long')
+    .matches(
+      '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])',
+      'Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character'
+    ),
 });
 
 export const RegisterForm = () => {
