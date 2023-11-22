@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import { GlobalStyle } from 'components/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { App } from 'components/App';
-import { store } from 'redux/store';
+import { store, persistor } from 'redux/store';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { BrowserRouter } from 'react-router-dom';
 
 const theme = {
-  bgColorSection: '#30D4B9',
+  bgColors: {
+    bgColorSection: '#a9a9a9',
+    bgColorButton: '#4d5ae5',
+    activeBgColor: '#404bbf',
+  },
+  colors: {
+    secondaryColor: '#ffffff',
+    primaryColor: '#454545',
+    notFoundLinkcolor: '#0000ff',
+    errorColor: '#ff0000',
+    borderColorInput: '#000000',
+    activeColorLink: '#000000',
+  },
+  boxShadowColor: '#454545',
   radius: '5px',
   spacing: value => `${value * 4}px`,
 };

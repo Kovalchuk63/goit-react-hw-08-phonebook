@@ -13,9 +13,7 @@ const Login = () => {
         {isLoadingLogin && (
           <BeatLoaderStyled color="#36d7b7"></BeatLoaderStyled>
         )}
-        {errorLogin && (
-          <Error>Error... Please reload the page and try again!</Error>
-        )}
+        {errorLogin && <Error>Error... Invalid login or password!</Error>}
       </LayoutSection>
     </React.Fragment>
   );

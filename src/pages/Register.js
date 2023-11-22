@@ -13,9 +13,7 @@ const Register = () => {
         {isLoadingRegister && (
           <BeatLoaderStyled color="#36d7b7"></BeatLoaderStyled>
         )}
-        {errorRegister && (
-          <Error>Error... Please reload the page and try again!</Error>
-        )}
+        {errorRegister && <Error>Error... Invalid form, Try again!</Error>}
       </LayoutSection>
     </React.Fragment>
   );
