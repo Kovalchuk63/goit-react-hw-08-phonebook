@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[526],{4526:function(n,e,t){t.r(e),t.d(e,{default:function(){return h}});var _,i=t(3459),o=t(168),r=t(5867).ZP.div(_||(_=(0,o.Z)(["\n  font-size: ",";\n  font-weight: 600;\n  line-height: 2;\n  text-align: center;\n"])),(function(n){return(0,n.theme.spacing)(12)})),c=t(184),h=function(){return(0,c.jsx)(i.P,{children:(0,c.jsx)(r,{children:"Whatsap, friend! ______New______ PHONEBOOK application."})})}}}]);
+//# sourceMappingURL=526.9475cdc7.chunk.js.map
